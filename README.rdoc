@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello, My name is Bob Wright. I live in Denver,Colorad. I'm still working on the premise of this app.
 
 Things you may want to cover:
 
