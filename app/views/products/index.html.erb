@@ -1,20 +1,18 @@
 
-<p id="notice"><%= notice %></p>
 
 <h1>Wright Co Products</h1>
 
+<% @products.each do |product| %>
+	<%= render @products  %>
+<% end %>
+
 <div class="container">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <%= image_tag("board.jpg", class: "img-responsive") %>
-        <h1>Product</h1>
-        <p>Information</p>
-        <strong>$cost$</strong>
-      </div><!-- /col -->
-    <% end %>
+    <% render "products" %>
   </div>
 </div>
+
+<p id="notice"><%= notice %></p>
 
 <br>
 
