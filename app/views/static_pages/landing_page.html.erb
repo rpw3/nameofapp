@@ -2,7 +2,7 @@
 
 
 <body>
- <div class ="container-fluid" 
+ <div class ="container" 
 	 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
    <ol class="carousel-indicators">
@@ -24,7 +24,7 @@
   </div>        
    <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
-      <div class="item<%= " active" if product == @products.first %>">
+      <div class="item">
       <%= image_tag "deck.jpg" %>
         <div class="carousel-caption">
          <%= product.name %>
@@ -34,7 +34,7 @@
   </div>        
     <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
-      <div class="item<%= " active" if product == @products.first %>">
+      <div class="item">
       <%= image_tag "color.jpg" %>
         <div class="carousel-caption">
          <%= product.name %>
