@@ -2,13 +2,13 @@
 
 <h1>Wright Co Products</h1>
 
-
+<% @products.each do |product| %>
+	<%= render "products"  %>
+<% end %>
 
 <div class="container">
   <div class="row">
-    <% @products.each do |product| %>
-			<%= render "products"  %>
-		<% end %>
+    <% render "products" %>
   </div>
 </div>
 
