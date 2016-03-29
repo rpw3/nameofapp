@@ -26,12 +26,16 @@
       <li><%= link_to "Featured Product",static_pages_landing_page_path %> </li>
       <li><%= link_to "About",static_pages_about_path %> </li>
       <li><%= link_to "Contact",static_pages_contact_path %> </li>
-      <li><%= form_tag("/products", method: "get") do %>
-          <%= label_tag(:q, "Search for:") %>
-          <%= text_field_tag(:q) %>
+      <form class="navbar-form navbar-left" role="search" id="search">
+        <div class="form-group">
+          <li><%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+         </div>     
           <%= submit_tag("Search") %></li>
           <% end %> 
-    </ul>
+          </ul>
+      </form>  
   </div>
 </nav>
 
