@@ -1,30 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <p> 
+      <span class="glyphicon glyphicon-user"></span>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    
+    </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @product.text %>
-</p>
+    <p>
+      <span class="glyphicon glyphicon-pencil"></span>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
 
-<p>  
-  <strong>Colour:</strong>
-  <%= @product.color %>
-</p>
+    <p>
+      <span class="glyphicon glyphicon-asterisk"></span>
+      <strong>Text:</strong>
+      <%= @product.text %>
+    </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+    <p>
+      <span class="glyphicon glyphicon-picture"></span>
+      <strong>Image url:</strong>
+      <%= @product.image_url %>
+    </p>
+
+    <p>  
+      <span class="glyphicon glyphicon-hand-right"></span>
+      <strong>Colour:</strong>
+      <%= @product.color %>
+    </p>
+    
+    </div>
+  </div>
+</div>
+
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
 
