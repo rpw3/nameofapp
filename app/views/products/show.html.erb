@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
+<div class="container-fluid" float: "right">
   <div class="row">
     <div class="col-xs-6 col-md-3">
 
@@ -32,13 +32,21 @@
 
     <p>  
       <span class="glyphicon glyphicon-hand-right"></span>
-      <strong>Colour:</strong>
+      <strong>Color:</strong>
       <%= @product.color %>
     </p>
-    
+    <p> 
+      <span class="glyphicon glyphicon-star-empty"></span>
+      <strong>Average Rating:</strong>
+      <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    </p>
     </div>
   </div>
 </div>
+
+<%= render :partial => "products/new_comment" %>
+<%= render :partial => "products/comments" %>
+    
 
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>

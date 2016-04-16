@@ -20,6 +20,10 @@ Rails.application.routes.draw do
 
    resources :orders, only: [:index, :show, :create, :destroy]
 
+  resources :products do
+    resources :comments
+  end
+  resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
