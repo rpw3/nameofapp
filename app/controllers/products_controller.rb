@@ -15,11 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-<<<<<<< HEAD
     @comments = @product.comments.order("created_at DESC")
-=======
-  
->>>>>>> master
   end
 
   # GET /products/new
