@@ -45,7 +45,9 @@
 </div>
 
 <%= render :partial => "products/new_comment" %>
+<%= will_paginate @comments %>
 <%= render :partial => "products/comments" %>
+
     
 
     <%= link_to 'Edit', edit_product_path(@product) %> |

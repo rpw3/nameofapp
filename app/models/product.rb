@@ -8,7 +8,8 @@ class Product < ActiveRecord::Base
 	end	
 
 	validates :name, presence: true
-		validates :user, presence:true
-		validates :product, presence:true
-		validates :rating, numericality: { only_integer: true}
+		validates :description, presence: true
+		validates :text, presence: true
+		validates :image_url, presence: true
+		validates :color, presence: true
 end
