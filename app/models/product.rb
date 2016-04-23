@@ -11,5 +11,5 @@ class Product < ActiveRecord::Base
 		validates :description, presence: true
 		validates :text, presence: true
 		validates :image_url, presence: true
-		validates :color, presence: true
+		
 end
