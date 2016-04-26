@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.raty
+//= require Alerts
+//= require comments
+//= require products
+//= require users
+//= require static_pages
+//= require site
+
 //= require_tree .
