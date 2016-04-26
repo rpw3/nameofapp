@@ -75,7 +75,7 @@ class UsersController < ApplicationController
     end
 
     class Ability
-      include CanCan::Ability
+      include CanCanCan::Ability
 
       def initialize(user)
         user ||= User.new # guest user (not logged in)
@@ -83,8 +83,8 @@ class UsersController < ApplicationController
           can :manage, :all
         else
           can :read, :all
-        end
       end
+     
     
 end
 
