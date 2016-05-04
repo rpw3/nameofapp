@@ -1,5 +1,4 @@
 require 'rails_helper'
-	
 describe Product do 
 	context "when the product has comments" do
 		before do
@@ -22,3 +21,14 @@ describe Product do
   end
 
 end	
+
+
+
+  /describe Product, :type => :model do
+  it "returns the average rating of all comments" do
+    @user = FactoryGirl.build(:user, email: "")
+    @product = FactoryGirl.build(:product,name:"",description: "",text:"",image_url:"")
+    @product.comments = FactoryGirl.build(:comment,rating:"",body: "")
+    expect(@product.average_rating).to eq 3
+    expect(Product.new(description: "Nice bike")).not_to be_valid  
+  end/

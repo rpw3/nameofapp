@@ -3,12 +3,11 @@ require 'rails_helper'
 describe UsersController, :type => :controller do
 
   before do
-    @userA = User.create!(email: "peter@example.com", password: "1234567890")
-    @userB = User.create!(email: "bob@example.com", password: "1234567890")
+    @user = FactoryGirl.create(:user)
   end
 
 
-  describe "GET #show" do
+  /describe "GET #show" do
     context "User is logged in" do
       before do
         sign_in @userA
@@ -49,7 +48,7 @@ describe UsersController, :type => :controller do
         expect(response).to redirect_to(new_user_session_path)
       end
     end
-  end
+  end/
 
 
 
