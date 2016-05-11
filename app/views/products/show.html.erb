@@ -47,6 +47,9 @@
 <%= render :partial => "products/new_comment" %>
 <%= will_paginate @comments %>
 <%= render :partial => "products/comments" %>
+<%= form_tag "/payments/create" do %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
 
     
     
