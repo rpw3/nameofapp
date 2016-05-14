@@ -1,5 +1,6 @@
 
 <% @products.each do |product| %>
+<% logger.debug "Product: #{@product.name}"%>
 <tr>
   <td><%= product.name %></td>
   <td><%= product.description %></td>

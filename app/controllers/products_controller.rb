@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    logger.debug
     @products = Product.all
     search_term = params[:q]
     if search_term.present?

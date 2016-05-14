@@ -11,15 +11,10 @@ class PaymentsController < ApplicationController
 	      :source => token,
 	      :description => params[:stripeEmail]
 	    )
-	    
-	    if charge.paid
-  			Order.create(params[:product_id,:user_id,:total])
-  		end
-
 	  rescue Stripe::CardError => e
 	    # The card has been declined
 
-	  redirect_to "/views/payments/create"
+	    
 	  end
 	end
 end
