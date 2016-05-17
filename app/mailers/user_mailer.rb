@@ -9,7 +9,12 @@ default from: "bob@wrightco.com"
         :subject => "A new contact form message from #{name}")
   end
 end
-
+  def welcome(user)
+  @appname = "Wright Co."
+  mail( :to => user.email,
+        :subject => "Welcome to #{@appname}!")
+  end
+  
 	def thank_you
   	@name = params[:name]
   	@email = params[:email]
