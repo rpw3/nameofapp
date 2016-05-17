@@ -1,0 +1,16 @@
+<body>
+    <h1>Welcome to wrightco.com, <%= @email %></h1>
+    <p>
+      You have successfully signed up to wrightco.com!
+    </p>
+    <p>
+      To login to the site, just follow this link: <%= @url %>.
+    </p>
+    <p>Happy shopping and have a great day!</p>
+</body>
+
+ /def welcome_email(email)
+    @email  = params[:email]
+    @url  = 'http://wrightco.herokuapp.com/users/sign_in'    
+    mail(to: @user.email, subject: 'Welcome to Wright Co.')
+    UserMailer.welcome_email(@email, @url).deliver_now/

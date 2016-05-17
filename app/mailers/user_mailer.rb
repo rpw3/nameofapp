@@ -17,11 +17,5 @@ end
   	UserMailer.contact_form(@email, @name, @message).deliver_now
 	end
 
-    def welcome_email(email)
-    @email  = params[:email]
-    @url  = 'http://wrightco.herokuapp.com/users/sign_in'    
-    mail(to: @user.email, subject: 'Welcome to Wright Co.')
-    UserMailer.welcome_email( @email, @url).deliver_now
-  end
-end
+
 
