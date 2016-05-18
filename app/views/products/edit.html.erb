@@ -1,6 +1,14 @@
 <h1>Editing Product</h1>
 <% logger.debug %>
-<%= render 'form' %>
+<div class="container-fluid">  
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+				<%= render 'form' %>
+				</div>
+			</div>
+		</div>
+</div>				
 
 <%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>

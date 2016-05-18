@@ -42,15 +42,15 @@
     </p>
     </div>
   </div>
-</div>
-<% logger.debug %>
-<%= render :partial => "products/new_comment" %>
-<%= will_paginate @comments %>
-<%= render :partial => "products/comments" %>
-<%= form_tag "/payments/create" do %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
 
+    <% logger.debug %>
+    <%= render :partial => "products/new_comment" %>
+    <%= will_paginate @comments %>
+    <%= render :partial => "products/comments" %>
+    <%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
+</div>
     
     
     <%= link_to 'Edit', edit_product_path(@product) %> |
