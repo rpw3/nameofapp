@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "user_registrations" }
   resources :users
   resources :products, :invoices, :orders, :users
+  default_url_options :host => "http://wrightco.herokuapp.com/"
   get 'static_pages/about'
 
   get 'static_pages/contact'
