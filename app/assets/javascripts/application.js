@@ -20,5 +20,5 @@
 //= require users
 //= require static_pages
 //= require site
-
+//= require angular
 //= require_tree .
