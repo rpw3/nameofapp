@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'static_pages#landing_page'
 
+   resources :payments, only: [:create]
    resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :products do

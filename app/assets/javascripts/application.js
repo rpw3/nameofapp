@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.raty
+//= require jquery.elevateZoom-3.0.8.min
 //= require Alerts
 //= require comments
 //= require products
