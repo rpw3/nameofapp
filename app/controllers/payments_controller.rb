@@ -24,5 +24,4 @@ class PaymentsController < ApplicationController
     	# if there is an erro it will send the user back to the product it came from
     	redirect_to product_path(product)
   	end
-  end
-end
+ 
