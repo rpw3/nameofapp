@@ -22,4 +22,5 @@
 //= require static_pages
 //= require site
 //= require angular
+//= require angular-resource
 //= require_tree .
