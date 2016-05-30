@@ -27,6 +27,8 @@ gem 'angularjs-rails'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
 gem "brakeman", :require => false
 
 # Use ActiveModel has_secure_password
