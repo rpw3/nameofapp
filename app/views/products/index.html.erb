@@ -4,14 +4,16 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        	<h1><%= product.name %></h1>
-        	<p><%= product.description %></p>
-        	<strong>$ price determined in cart $</strong>
-      </div><!-- /col -->
-    <% end %>
+    <% cache (cache_key_for_products) do %>
+      <% @products.each do |product| %>
+        <div class="col-sm-2">
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+          	<h1><%= product.name %></h1>
+          	<p><%= product.description %></p>
+          	<strong>$ price determined in cart $</strong>
+        </div><!-- /col -->
+      <% end %>
+    <% end %> 
   </div>
 </div>
 

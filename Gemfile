@@ -25,7 +25,7 @@ gem 'stripe'
 
 gem 'angularjs-rails'
 
-
+gem 'dalli'
 
 gem "brakeman", :require => false
 

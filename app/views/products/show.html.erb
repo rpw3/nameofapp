@@ -1,51 +1,51 @@
 <p id="notice"><%= notice %></p>
+<% cache @product do %>
+  <div class="container-fluid" float: "right">
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+      <p> 
+      <%= image_tag(@product.image_url, width: "350", class: "img-zoom" , data_zoom_image:@product.image_url)%>
+      </p>
 
-<div class="container-fluid" float: "right">
-  <div class="row">
-    <div class="col-xs-6 col-md-3">
-    <p> 
-    <%= image_tag(@product.image_url, width: "350", class: "img-zoom" , data_zoom_image:@product.image_url)%>
-    </p>
+      <p> 
+        <span class="glyphicon glyphicon-user"></span>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      
+      </p>
 
-    <p> 
-      <span class="glyphicon glyphicon-user"></span>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    
-    </p>
-
-    <p>
-      <span class="glyphicon glyphicon-pencil"></span>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+      <p>
+        <span class="glyphicon glyphicon-pencil"></span>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
 
-    <p>
-      <span class="glyphicon glyphicon-asterisk"></span>
-      <strong>Text:</strong>
-      <%= @product.text %>
-    </p>
+      <p>
+        <span class="glyphicon glyphicon-asterisk"></span>
+        <strong>Text:</strong>
+        <%= @product.text %>
+      </p>
 
-    <p>
-      <span class="glyphicon glyphicon-picture"></span>
-      <strong>Image url:</strong>
-      <%= @product.image_url %>
-    </p>
+      <p>
+        <span class="glyphicon glyphicon-picture"></span>
+        <strong>Image url:</strong>
+        <%= @product.image_url %>
+      </p>
 
-    <p>  
-      <span class="glyphicon glyphicon-hand-right"></span>
-      <strong>Color:</strong>
-      <%= @product.color %>
-    </p>
-    <p> 
-      <span class="glyphicon glyphicon-star-empty"></span>
-      <strong>Average Rating:</strong>
-      <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-    </p>
+      <p>  
+        <span class="glyphicon glyphicon-hand-right"></span>
+        <strong>Color:</strong>
+        <%= @product.color %>
+      </p>
+      <p> 
+        <span class="glyphicon glyphicon-star-empty"></span>
+        <strong>Average Rating:</strong>
+        <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      </p>
+      </div>
     </div>
-  </div>
-
+  <% end %>
     <% logger.debug %>
     <%= render :partial => "products/new_comment" %>
     <%= will_paginate @comments %>
