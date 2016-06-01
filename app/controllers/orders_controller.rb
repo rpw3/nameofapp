@@ -19,7 +19,6 @@ respond_to :json, :html
 	def create
 	  @order = Order.create(order_params)
 	  respond_with @order
-		UserMailer.order_confirmation(user, order).deliver
 	end
 
 	def destroy
