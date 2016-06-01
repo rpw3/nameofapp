@@ -22,12 +22,5 @@ default from: "bob@wrightco.com"
   	UserMailer.contact_form(@email, @name, @message).deliver_now
 	end
 
-  def order_confirmation(user)
-    @appname = "Wright Co."
-      mail( :to => user.email,
-          :subject => "#{@appname} order confirmation")
-    UserMailer.order_confirmation(user).deliver  
-  end
-end
 
 end
